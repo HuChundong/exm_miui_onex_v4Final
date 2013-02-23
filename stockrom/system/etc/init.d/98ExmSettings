@@ -1,0 +1,9 @@
+#!/system/bin/sh
+sleep 60
+echo "set max cpu cores 4" >> /data/exm_miui.log
+echo "4" > /sys/kernel/tegra_mpdecision/conf/max_cpus
+echo "set cpu max 1.5Ghz" >> /data/exm_miui.log
+echo "1500000" > /sys/module/cpu_tegra/parameters/cpu_user_cap
+
+echo 0 > /sys/devices/platform/tegra_grhost/enable_3d_scaling
+

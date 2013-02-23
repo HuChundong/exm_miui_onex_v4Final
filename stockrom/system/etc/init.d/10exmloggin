@@ -1,0 +1,5 @@
+#!/system/bin/sh
+#
+
+echo "Start exm_miui logging..." > /data/exm_miui.log
+

@@ -1,0 +1,43 @@
+#!/system/bin/sh
+#uc ads cleaner v1.0
+#written by kingdragonfly
+
+oldpath=$(pwd)
+cd /data/data/com.UCMobile/UCMobile/usdata5/
+if [ $? -eq 0 ]; then
+if [ -e nlp_dlpage ]&&[ -w "nlp_dlpage" ]; then
+	rm nlp_dlpage
+	touch nlp_dlpage
+	chmod 500 nlp_dlpage
+fi
+if [ -e lp_download ]&&[ -w "lp_download" ]; then
+	rm lp_download
+	touch lp_download
+	chmod 500 lp_download
+fi
+for file in `ls sl_ad_* 2>/dev/null`
+do
+	if [ -w $file ]; then
+		rm $file
+		touch $file
+		chmod 500 $file
+	fi
+done
+for file in `ls lp_ad_* 2>/dev/null`
+do
+	if [ -w $file ]; then
+		rm $file
+		touch $file
+		chmod 500 $file
+	fi
+done
+for file in `ls nlp_ad_* 2>/dev/null`
+do
+	if [ -w $file ]; then
+		rm $file
+		touch $file
+		chmod 500 $file
+	fi
+done
+cd $oldpath
+fi

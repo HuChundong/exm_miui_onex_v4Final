@@ -1,0 +1,99 @@
+#!/system/bin/sh
+# ==============================
+#   Iba21 Jb Stock Kernel MOD
+# ==============================
+
+    #echo 50000000 > /sys/devices/system/cpu/cpufreq/ondemand/input_boost_duration
+    #echo 250 > /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias
+    #echo 760000 > /sys/devices/system/cpu/cpufreq/ondemand/two_phase_bottom_freq
+    #echo 1100000 > /sys/devices/system/cpu/cpufreq/ondemand/two_phase_freq
+    #echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+    #echo 100000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+
+(while [ 1 ]
+
+do
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/up_threshold`
+if [ "$FIGA" != "95" ]
+then
+
+    echo 95 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias`
+if [ "$FIGA" != "190" ]
+then
+
+    echo 190 > /sys/devices/system/cpu/cpufreq/ondemand/powersave_bias
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor`
+if [ "$FIGA" != "1" ]
+then
+
+    echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/two_phase_freq`
+if [ "$FIGA" != "1200000" ]
+then
+
+    echo 1200000 > /sys/devices/system/cpu/cpufreq/ondemand/two_phase_freq
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/two_phase_bottom_freq`
+if [ "$FIGA" != "475000" ]
+then
+
+    echo 475000 > /sys/devices/system/cpu/cpufreq/ondemand/two_phase_bottom_freq
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/input_boost_duration`
+if [ "$FIGA" != "50000000" ]
+then
+
+    echo 50000000 > /sys/devices/system/cpu/cpufreq/ondemand/input_boost_duration
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/ui_sampling_rate`
+if [ "$FIGA" != "50000" ]
+then
+
+    echo 50000 > /sys/devices/system/cpu/cpufreq/ondemand/ui_sampling_rate
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/ux_boost_threshold`
+if [ "$FIGA" != "99" ]
+then
+
+    echo 99 > /sys/devices/system/cpu/cpufreq/ondemand/ux_boost_threshold
+
+fi
+
+FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/ux_loading`
+if [ "$FIGA" != "99" ]
+then
+
+    echo 99 > /sys/devices/system/cpu/cpufreq/ondemand/ux_loading
+
+fi
+
+#FIGA=`cat /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate`
+#if [ "$FIGA" != "30000" ]
+#then
+
+    #echo 30000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
+
+#fi
+
+sleep 60
+
+done &)
