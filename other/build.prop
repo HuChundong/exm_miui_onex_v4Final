@@ -1,7 +1,7 @@
 #OTA SUPPORT
 otaupdater.otaid=kingme
-otaupdater.otatime=20130222-1700
-otaupdater.otaver=3.2.22
+otaupdater.otatime=20130224-1700
+otaupdater.otaver=3.2.24
 
 ro.ril.ecc.HTC-Asia-SEA-WWE=911,112,999,110,191,113,15,1122,115,16,118
 ro.ril.hsdpa.category=14
