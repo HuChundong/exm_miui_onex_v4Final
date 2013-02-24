@@ -1,0 +1,17 @@
+#!/system/bin/sh
+# ========================================
+# CPU  Settings 
+# ========================================
+
+sleep 60
+# ========================================
+# max_cpus 2,3,4
+# ========================================
+
+echo "set max cpu cores 4" >> /data/exm_miui.log
+echo "4" > /sys/kernel/tegra_mpdecision/conf/max_cpus
+
+echo 0 > /sys/devices/platform/tegra_grhost/enable_3d_scaling
+
+
+
